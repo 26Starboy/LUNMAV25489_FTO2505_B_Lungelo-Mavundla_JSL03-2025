@@ -29,3 +29,26 @@ function getValidStatus() {
   }
   return status;
 }
+
+// Function to add up to 3 new tasks
+function addNewTasks(maxTasks = 3) {
+  for (let i = 0; i < maxTasks; i++) {
+    if (initialTasks.length >= 6) {
+      alert("Task limit reached. Please check your board in the console.");
+      break;
+    }
+
+    const title = prompt(`Enter title for task ${initialTasks.length + 1}:`);
+    const description = prompt(`Enter description for task ${initialTasks.length + 1}:`);
+    const status = getValidStatus();
+
+    const newTask = {
+      id: initialTasks.length + 1,
+      title: title,
+      description: description,
+      status: status,
+    };
+
+    initialTasks.push(newTask);
+  }
+}
