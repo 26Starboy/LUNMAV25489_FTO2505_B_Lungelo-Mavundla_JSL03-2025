@@ -60,3 +60,16 @@ function logAllTasks() {
     console.log(`ID: ${task.id}, Title: ${task.title}, Description: ${task.description}, Status: ${task.status}`);
   });
 }
+
+// Function to log only completed tasks
+function logCompletedTasks() {
+  const completed = initialTasks.filter(task => task.status === "done");
+  if (completed.length > 0) {
+    console.log("Completed Tasks:");
+    completed.forEach(task => {
+      console.log(`ID: ${task.id}, Title: ${task.title}, Description: ${task.description}, Status: ${task.status}`);
+    });
+  } else {
+    console.log("No completed tasks yet.");
+  }
+}
