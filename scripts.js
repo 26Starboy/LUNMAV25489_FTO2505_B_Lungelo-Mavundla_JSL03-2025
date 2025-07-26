@@ -52,3 +52,11 @@ function addNewTasks(maxTasks = 3) {
     initialTasks.push(newTask);
   }
 }
+
+// Function to log all tasks
+function logAllTasks() {
+  console.log("All Tasks:");
+  initialTasks.forEach(task => {
+    console.log(`ID: ${task.id}, Title: ${task.title}, Description: ${task.description}, Status: ${task.status}`);
+  });
+}
