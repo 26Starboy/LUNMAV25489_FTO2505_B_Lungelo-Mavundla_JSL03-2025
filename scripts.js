@@ -18,4 +18,14 @@ const initialTasks = [
       "Gain practical experience and collaborate with others in the software development community",
     status: "done",
   },
-];
+]
+
+// Function to validate task status input
+function getValidStatus() {
+  let status = prompt("Enter task status (todo, doing, done):").toLowerCase();
+  while (status !== "todo" && status !== "doing" && status !== "done") {
+    alert("Invalid status. Please enter 'todo', 'doing', or 'done'.");
+    status = prompt("Enter task status (todo, doing, done):").toLowerCase();
+  }
+  return status;
+}
