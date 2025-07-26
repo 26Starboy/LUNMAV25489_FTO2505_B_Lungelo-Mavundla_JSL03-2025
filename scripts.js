@@ -73,3 +73,8 @@ function logCompletedTasks() {
     console.log("No completed tasks yet.");
   }
 }
+
+// Run all the functions
+addNewTasks();          // Prompt user to add 3 new tasks
+logAllTasks();          // Display everything
+logCompletedTasks();    // Show only 'done' tasks
